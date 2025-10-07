@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:profile_uygulama/Containers/containers.dart';
 import 'package:profile_uygulama/Detail/detail_screen.dart';
 
@@ -14,7 +15,25 @@ class ProjeScreen extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 50, left: 16.0),
-            child: Text('Yaptığım Projeler', style: TextStyle(fontSize: 25)),
+            child: Row(
+              children: [
+                ClipOval(
+                  child: Image.asset(
+                    'assets/images/arrow.gif',
+                    width: 35,
+                    height: 35,
+                  ),
+                ),
+                SizedBox(width: 10),
+                Text(
+                  'Yaptığım Projeler',
+                  style: GoogleFonts.nunito(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
           ),
           Row(
             children: [
