@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:profile_uygulama/Containers/containers.dart';
+import 'package:profile_uygulama/Containers/proje_container.dart';
 import 'package:profile_uygulama/Detail/detail_screen.dart';
+import 'package:profile_uygulama/Widget/proje_ana_baslik_widget.dart';
 
 class ProjeScreen extends StatelessWidget {
   const ProjeScreen({super.key});
@@ -10,188 +10,197 @@ class ProjeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 50, left: 16.0),
-            child: Row(
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 50, left: 16.0),
+              child: ProjeAnaBaslikWidget(
+                iconBaslik: 'assets/gif/arrow.gif',
+                anaBaslik: 'Yaptığım Projeler',
+              ),
+            ),
+            Row(
               children: [
-                ClipOval(
-                  child: Image.asset(
-                    'assets/images/arrow.gif',
-                    width: 35,
-                    height: 35,
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                      top: 16.0,
+                      left: 16.0,
+                      right: 8.0,
+                    ),
+                    child: GestureDetector(
+                      onDoubleTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailScreen(),
+                          ),
+                        );
+                      },
+                      child: ProjeContainer(
+                        containerProjeImage: 'assets/images/gezinti.png',
+                        containerColorImage: Colors.pink,
+                        containerProjeTitle: 'Gezinti',
+                        containerProjeAciklama:
+                            'Seyehat için rehber uygulaması',
+                        containerTagName1: 'Flutter',
+                        containerTagName2: 'Dart',
+                      ),
+                    ),
                   ),
                 ),
-                SizedBox(width: 10),
-                Text(
-                  'Yaptığım Projeler',
-                  style: GoogleFonts.nunito(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                      top: 16.0,
+                      left: 8.0,
+                      right: 16.0,
+                    ),
+                    child: GestureDetector(
+                      onDoubleTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailScreen(),
+                          ),
+                        );
+                      },
+                      child: ProjeContainer(
+                        containerProjeImage: 'assets/images/safebite.png',
+                        containerColorImage: Colors.indigo,
+                        containerProjeTitle: 'SafeBite',
+                        containerProjeAciklama:
+                            'Çölyaklar için rehber uygulaması',
+                        containerTagName1: 'Flutter',
+                        containerTagName2: 'Dart',
+                      ),
+                    ),
                   ),
                 ),
               ],
             ),
-          ),
-          Row(
-            children: [
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                    top: 16.0,
-                    left: 16.0,
-                    right: 8.0,
-                  ),
-                  child: GestureDetector(
-                    onDoubleTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => DetailScreen()),
-                      );
-                    },
-                    child: Container(
-                      width: double.infinity,
-                      height: 300,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color: Colors.white,
+            Row(
+              children: [
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 16.0, left: 16.0, right: 8.0),
+                    child: GestureDetector(
+                      onDoubleTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailScreen(),
+                          ),
+                        );
+                      },
+                      child: ProjeContainer(
+                        containerProjeImage: 'assets/images/portfolyo.png',
+                        containerColorImage: Colors.teal,
+                        containerProjeTitle: 'ProfileApp',
+                        containerProjeAciklama: 'Kişisel portfolyo Uygulamam',
+                        containerTagName1: 'Flutter',
+                        containerTagName2: 'Dart',
                       ),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: double.infinity,
-                            height: 200,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(25),
-                                topRight: Radius.circular(25),
-                              ),
-                              color: Colors.pink,
-                            ),
-                            child: Center(
-                              child: CircleAvatar(
-                                radius: 35,
-                                backgroundImage: AssetImage(
-                                  'assets/images/gezinti.png',
-                                ),
-                              ),
-                            ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 16.0, left: 8.0, right: 16.0),
+                    child: GestureDetector(
+                      onDoubleTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailScreen(),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                              top: 8.0,
-                              right: 8.0,
-                              left: 8.0,
-                            ),
-                            child: Text(
-                              'Gezinti',
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                        );
+                      },
+                      child: ProjeContainer(
+                        containerProjeImage: 'assets/images/portfolyo.png',
+                        containerColorImage: Colors.teal,
+                        containerProjeTitle: 'ProfileApp',
+                        containerProjeAciklama: 'Kişisel portfolyo Uygulamam',
+                        containerTagName1: 'Flutter',
+                        containerTagName2: 'Dart',
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 16.0, left: 16.0),
+              child: ProjeAnaBaslikWidget(
+                iconBaslik: 'assets/gif/handshake.gif',
+                anaBaslik: 'Katıldığım Projeler',
+              ),
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                      top: 16.0,
+                      left: 16.0,
+                      right: 8.0,
+                    ),
+                    child: GestureDetector(
+                      onDoubleTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailScreen(),
                           ),
-                          Text(
+                        );
+                      },
+                      child: ProjeContainer(
+                        containerProjeImage: 'assets/images/gezinti.png',
+                        containerColorImage: Colors.pink,
+                        containerProjeTitle: 'Gezinti',
+                        containerProjeAciklama:
                             'Seyehat için rehber uygulaması',
-                            style: TextStyle(fontSize: 10),
-                          ),
-                          Expanded(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                TagContainer(tagName: 'Flutter'),
-                                SizedBox(width: 10),
-                                TagContainer(tagName: 'Dart'),
-                              ],
-                            ),
-                          ),
-                        ],
+                        containerTagName1: 'Flutter',
+                        containerTagName2: 'Dart',
                       ),
                     ),
                   ),
                 ),
-              ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                    top: 16.0,
-                    left: 8.0,
-                    right: 16.0,
-                  ),
-                  child: GestureDetector(
-                    onDoubleTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => DetailScreen()),
-                      );
-                    },
-                    child: Container(
-                      width: double.infinity,
-                      height: 300,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color: Colors.white,
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: double.infinity,
-                            height: 200,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                topRight: Radius.circular(25),
-                                topLeft: Radius.circular(25),
-                              ),
-                              color: Colors.indigo,
-                            ),
-                            child: Center(
-                              child: CircleAvatar(
-                                radius: 35,
-                                backgroundImage: AssetImage(
-                                  'assets/images/safebite.png',
-                                ),
-                              ),
-                            ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                      top: 16.0,
+                      left: 8.0,
+                      right: 16.0,
+                    ),
+                    child: GestureDetector(
+                      onDoubleTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailScreen(),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                              top: 8.0,
-                              right: 8.0,
-                              left: 8.0,
-                            ),
-                            child: Text(
-                              'SafeBite',
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                          Text(
+                        );
+                      },
+                      child: ProjeContainer(
+                        containerProjeImage: 'assets/images/safebite.png',
+                        containerColorImage: Colors.indigo,
+                        containerProjeTitle: 'SafeBite',
+                        containerProjeAciklama:
                             'Çölyaklar için rehber uygulaması',
-                            style: TextStyle(fontSize: 10),
-                          ),
-                          Expanded(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                TagContainer(tagName: 'Flutter'),
-                                SizedBox(width: 10),
-                                TagContainer(tagName: 'Dart'),
-                              ],
-                            ),
-                          ),
-                        ],
+                        containerTagName1: 'Flutter',
+                        containerTagName2: 'Dart',
                       ),
                     ),
                   ),
                 ),
-              ),
-            ],
-          ),
-        ],
+              ],
+            ),
+            SizedBox(height: 150),
+          ],
+        ),
       ),
     );
   }
