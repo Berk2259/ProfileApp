@@ -96,10 +96,11 @@ class ProjeScreen extends StatelessWidget {
                         );
                       },
                       child: ProjeContainer(
-                        containerProjeImage: 'assets/images/portfolyo.png',
-                        containerColorImage: Colors.teal,
-                        containerProjeTitle: 'ProfileApp',
-                        containerProjeAciklama: 'Kişisel portfolyo Uygulamam',
+                        containerProjeImage: 'assets/images/crafty.png',
+                        containerColorImage: Colors.deepOrangeAccent,
+                        containerProjeTitle: 'Crafty',
+                        containerProjeAciklama:
+                            'Origamiler için rehber uygulaması',
                         containerTagName1: 'Flutter',
                         containerTagName2: 'Dart',
                       ),
@@ -120,7 +121,7 @@ class ProjeScreen extends StatelessWidget {
                       },
                       child: ProjeContainer(
                         containerProjeImage: 'assets/images/portfolyo.png',
-                        containerColorImage: Colors.teal,
+                        containerColorImage: Colors.amber,
                         containerProjeTitle: 'ProfileApp',
                         containerProjeAciklama: 'Kişisel portfolyo Uygulamam',
                         containerTagName1: 'Flutter',
@@ -157,11 +158,10 @@ class ProjeScreen extends StatelessWidget {
                         );
                       },
                       child: ProjeContainer(
-                        containerProjeImage: 'assets/images/gezinti.png',
-                        containerColorImage: Colors.pink,
-                        containerProjeTitle: 'Gezinti',
-                        containerProjeAciklama:
-                            'Seyehat için rehber uygulaması',
+                        containerProjeImage: 'assets/images/code.png',
+                        containerColorImage: Colors.deepPurpleAccent,
+                        containerProjeTitle: 'Movliq',
+                        containerProjeAciklama: 'Sosyal Koşu Uygulaması',
                         containerTagName1: 'Flutter',
                         containerTagName2: 'Dart',
                       ),
@@ -185,11 +185,42 @@ class ProjeScreen extends StatelessWidget {
                         );
                       },
                       child: ProjeContainer(
-                        containerProjeImage: 'assets/images/safebite.png',
-                        containerColorImage: Colors.indigo,
-                        containerProjeTitle: 'SafeBite',
+                        containerProjeImage: 'assets/images/code.png',
+                        containerColorImage: Colors.teal,
+                        containerProjeTitle: 'Dijital Arı',
                         containerProjeAciklama:
-                            'Çölyaklar için rehber uygulaması',
+                            'Dijital Arı firması için uygulama',
+                        containerTagName1: 'Flutter',
+                        containerTagName2: 'Dart',
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                      top: 16.0,
+                      left: 16.0,
+                      right: 8.0,
+                    ),
+                    child: GestureDetector(
+                      onDoubleTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailScreen(),
+                          ),
+                        );
+                      },
+                      child: ProjeContainer(
+                        containerProjeImage: 'assets/images/code.png',
+                        containerColorImage: Colors.brown,
+                        containerProjeTitle: 'Maç Kafası',
+                        containerProjeAciklama: 'Halısaha Uygulaması',
                         containerTagName1: 'Flutter',
                         containerTagName2: 'Dart',
                       ),

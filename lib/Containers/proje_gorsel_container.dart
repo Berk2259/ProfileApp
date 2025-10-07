@@ -25,6 +25,7 @@ class ProjeGorselContainer extends StatelessWidget {
         child: CircleAvatar(
           radius: 35,
           backgroundImage: AssetImage(projeImage),
+          backgroundColor: Colors.transparent,
         ),
       ),
     );
