@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:profile_uygulama/Containers/proje_container.dart';
-import 'package:profile_uygulama/Detail/detail_screen.dart';
-import 'package:profile_uygulama/Widget/proje_ana_baslik_widget.dart';
+import 'package:profile_uygulama/Containers/containers.dart';
+import 'package:profile_uygulama/Detail/detail.dart';
+import 'package:profile_uygulama/Widget/widget.dart';
 
 class ProjeScreen extends StatelessWidget {
   const ProjeScreen({super.key});
