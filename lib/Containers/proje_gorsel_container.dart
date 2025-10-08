@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//Projelerdeki görsel yapısı burada tanımlanıyor
 class ProjeGorselContainer extends StatelessWidget {
   final String projeImage;
   final Color colorImage;

@@ -35,7 +35,8 @@ class ProjeScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => DetailScreen(),
+                            builder:
+                                (context) => DetailScreen(baslik: 'Gezinti'),
                           ),
                         );
                       },
@@ -63,7 +64,8 @@ class ProjeScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => DetailScreen(),
+                            builder:
+                                (context) => DetailScreen(baslik: 'SafeBite'),
                           ),
                         );
                       },
@@ -91,7 +93,8 @@ class ProjeScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => DetailScreen(),
+                            builder:
+                                (context) => DetailScreen(baslik: 'Crafty'),
                           ),
                         );
                       },
@@ -115,7 +118,8 @@ class ProjeScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => DetailScreen(),
+                            builder:
+                                (context) => DetailScreen(baslik: 'ProfileApp'),
                           ),
                         );
                       },
@@ -153,7 +157,8 @@ class ProjeScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => DetailScreen(),
+                            builder:
+                                (context) => DetailScreen(baslik: 'Movliq'),
                           ),
                         );
                       },
@@ -180,7 +185,9 @@ class ProjeScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => DetailScreen(),
+                            builder:
+                                (context) =>
+                                    DetailScreen(baslik: 'Dijital Arı'),
                           ),
                         );
                       },
@@ -212,7 +219,8 @@ class ProjeScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => DetailScreen(),
+                            builder:
+                                (context) => DetailScreen(baslik: 'Maç Kafası'),
                           ),
                         );
                       },

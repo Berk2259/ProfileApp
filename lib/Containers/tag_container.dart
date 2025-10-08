@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//Taglerin container yapısı
 class TagContainer extends StatelessWidget {
   final String tagName;
   const TagContainer({super.key, required this.tagName});

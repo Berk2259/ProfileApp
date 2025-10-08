@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:profile_uygulama/Containers/containers.dart';
 import 'package:profile_uygulama/Widget/widget.dart';
 
+
+//Proje sayfasında bulunan her bir projenin yapısı 
 class ProjeContainer extends StatelessWidget {
   final String containerProjeImage;
   final Color containerColorImage;

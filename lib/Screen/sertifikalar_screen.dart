@@ -5,6 +5,6 @@ class SertifikalarScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.blue);
+    return Scaffold(backgroundColor: Colors.lightBlueAccent);
   }
 }
